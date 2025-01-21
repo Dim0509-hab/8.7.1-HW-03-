@@ -1,5 +1,5 @@
 .btn-link {
-    background-color: #dca0a8;
+    background-color: #d7cf0e;
     color: rgb(22, 175, 14);
     padding: 15px 32px;
     text-align: center;
@@ -33,7 +33,7 @@
     border-radius: 4px;
 }
 p {
-    color: rgb(69, 18, 108);
+    color: rgb(18, 110, 50);
     font-size: 25px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, ;
    
@@ -52,7 +52,7 @@ h3 {
 .card {
     position: absolute;
     margin-top: 300px;
-    margin-left: 350px;
+    margin-left: 550px;    
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
