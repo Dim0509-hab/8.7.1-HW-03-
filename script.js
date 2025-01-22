@@ -26,12 +26,11 @@ const answerField = document.getElementById('answerField');
     }
     if (n < 0) {
         result.push('минус');
-      
     }
-    
-    const ediniz = n % 10;
-    const desyat = Math.floor(n % 100 / 10);
-    const sotni = Math.floor(n / 100);
+        
+    const ediniz = Math.abs(n) % 10;
+    const desyat = Math.floor(Math.abs(n) % 100 / 10);
+    const sotni = Math.floor(Math.abs(n) / 100);
     if (sotni > 0) {
         result.push([
             undefined, 'сто' , 'двести' , 'триста'   , 'четыреста',
@@ -61,7 +60,7 @@ const answerField = document.getElementById('answerField');
     
     
 orderNumberField.innerText = orderNumber;
-answerField.innerText = `Вы загадали число ${result.join(' ')}?`;
+answerField.innerText = `Вы загадали число \n ${result.join(' ')}?`;
 
 
 
@@ -98,9 +97,9 @@ document.getElementById('btnLess').addEventListener('click', function () {  // �
               if (n < 0) {
              result.push('минус');
             }
-            const ediniz = n % 10;
-            const desyat = Math.floor(n % 100 / 10);
-            const sotni = Math.floor(n / 100);
+            const ediniz = Math.abs(n) % 10;
+            const desyat = Math.floor(Math.abs(n) % 100 / 10);
+            const sotni = Math.floor(Math.abs(n) / 100);
             if (sotni > 0) {
              result.push([
             undefined, 'сто'  , 'двести' , 'триста'   , 'четыреста',
@@ -132,13 +131,13 @@ document.getElementById('btnLess').addEventListener('click', function () {  // �
             orderNumberField.innerText = orderNumber;
             const phraseRandom = Math.round(Math.random() * 2);
             if (phraseRandom === 0) {
-                answerPhrase  = `Вот фантазёр, это же ${result.join(' ') }?`;
+                answerPhrase  = `Вот фантазёр, это же \n ${result.join(' ') }?`;
             } else
             if (phraseRandom === 1) {
-                answerPhrase  = `Число в студию и это ${result.join(' ') }?`;
+                answerPhrase  = `Число в студию и это \n ${result.join(' ') }?`;
             } else
             if (phraseRandom === 2) {
-                answerPhrase  = `Вжух, мы видим цифру ${result.join(' ') }?`;
+                answerPhrase  = `Вжух, мы видим цифру \n ${result.join(' ') }?`;
             } 
             answerField.innerText = answerPhrase ;
            
@@ -176,9 +175,9 @@ document.getElementById('btnOver').addEventListener('click', function () {// Б�
               if (n < 0) {
              result.push('минус');
             }
-            const ediniz = n % 10;
-            const desyat = Math.floor(n % 100 / 10);
-            const sotni = Math.floor(n / 100);
+            const ediniz = Math.abs(n) % 10;
+            const desyat = Math.floor(Math.abs(n) % 100 / 10);
+            const sotni = Math.floor(Math.abs(n) / 100);
             if (sotni > 0) {
              result.push([
                undefined, 'сто'     , 'двести' , 'триста'   , 'четыреста',
@@ -210,13 +209,13 @@ document.getElementById('btnOver').addEventListener('click', function () {// Б�
             orderNumberField.innerText = orderNumber;
             const phraseRandom = Math.round(Math.random() * 2);
             if (phraseRandom === 0) {
-                answerPhrase  = `Вот фантазёр, это же ${result.join(' ') }?`;
+                answerPhrase  = `Вот фантазёр, это же \n ${result.join(' ') }?`;
             } else
             if (phraseRandom === 1) {
-                answerPhrase  = `Число в студию и это ${result.join(' ')}?`;
+                answerPhrase  = `Число в студию и это \n ${result.join(' ')}?`;
             } else
             if (phraseRandom === 2) {
-                answerPhrase  = `Вжух, мы видим цифру ${result.join(' ')}?`;
+                answerPhrase  = `Вжух, мы видим цифру \n ${result.join(' ')}?`;
             }    
             answerField.innerText = answerPhrase ;
             }
