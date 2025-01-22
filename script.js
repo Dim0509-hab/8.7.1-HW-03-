@@ -1,5 +1,6 @@
-let minValue = parseInt(prompt('Минимальное значение числа для игры','-66')); 
-let maxValue = parseInt(prompt('Максимальное значение числа для игры','5'));
+
+let minValue = parseInt(prompt('Минимальное значение числа для игры','-999')); 
+let maxValue = parseInt(prompt('Максимальное значение числа для игры','999'));
 
 minValue = (minValue < -999) ? minValue = -999 : (minValue > 999) ? minValue = 999 : minValue;
 maxValue = (maxValue > 999) ? maxValue = 999 : (maxValue < -999) ? maxValue = -999 : maxValue;
@@ -70,7 +71,7 @@ document.getElementById('btnRetry').addEventListener('click', function () {  //�
 
 document.getElementById('btnLess').addEventListener('click', function () {  // Меньше
     if (gameRun){
-        if (minValue === maxValue){                                         // Калапс алгоритма
+        if (minValue === answerNumber){                                         // Калапс алгоритма
             const phraseRandom = Math.round(Math.random() * 2);
             if (phraseRandom == 0) {  
                 answerPhrase  = `Прошу вас, будьте внимательны!\n\u{1F914}`;
@@ -119,14 +120,14 @@ document.getElementById('btnLess').addEventListener('click', function () {  // �
                 'сорок'      , 'пятьдесят', 'шестьдесят' , 'семьдесят',
                 'восемьдесят', 'девяносто'
             ][desyat]);
-        }
-        if (ediniz > 0) {
-            result.push([
-                undefined, 'один' , 'два' , 'три'   , 'четыре',
+            }
+            if (ediniz > 0) {
+                result.push([
+                undefined, 'один' , 'два' , 'три' , 'четыре',
                 'пять'   , 'шесть', 'семь', 'восемь', 'девять'
             ][ediniz]);
-        }
-    }
+            }
+            }
 
             orderNumberField.innerText = orderNumber;
             const phraseRandom = Math.round(Math.random() * 2);
@@ -146,9 +147,9 @@ document.getElementById('btnLess').addEventListener('click', function () {  // �
     }
 })
 
-document.getElementById('btnOver').addEventListener('click', function () {// Больше
+document.getElementById('btnOver').addEventListener('click', function () {     // Больше
     if (gameRun){
-        if (minValue === maxValue){                                   // Калапс алгоритма
+        if (minValue === maxValue){                                       // Калапс алгоритма
             const phraseRandom = Math.round(Math.random() * 2);
             if (phraseRandom == 0) {   
                 answerPhrase  = `Прошу вас, будьте внимательны!\n\u{1F914}`;
@@ -167,7 +168,7 @@ document.getElementById('btnOver').addEventListener('click', function () {// Б�
             answerNumber  = Math.floor((minValue + maxValue) / 2);
             orderNumber++;
 
-            const n = answerNumber;          //  Интерпритатор число - текст
+            const n = answerNumber;                                      //  Интерпритатор число - текст
             const result = [];
             if (n === 0) {
              result.push('ноль');
@@ -197,14 +198,14 @@ document.getElementById('btnOver').addEventListener('click', function () {// Б�
                 'сорок'      , 'пятьдесят', 'шестьдесят' , 'семьдесят',
                 'восемьдесят', 'девяносто'
             ][desyat]);
-        }
-        if (ediniz > 0) {
+            }
+            if (ediniz > 0) {
             result.push([
                 undefined, 'один' , 'два' , 'три'   , 'четыре',
                 'пять'   , 'шесть', 'семь', 'восемь', 'девять'
             ][ediniz]);
-        }
-    }
+            }
+            }
 
             orderNumberField.innerText = orderNumber;
             const phraseRandom = Math.round(Math.random() * 2);
@@ -237,6 +238,6 @@ document.getElementById('btnEqual').addEventListener('click', function () {  //�
             }
         answerField.innerText =  answerPhrase;
         gameRun = false;
-    }
+        }
 })
 
