@@ -1,6 +1,6 @@
 
-let minValue = parseInt(prompt('Минимальное значение числа для игры','-999')); 
-let maxValue = parseInt(prompt('Максимальное значение числа для игры','999'));
+let minValue =  parseInt(prompt('Минимальное значение числа для игры','-999')); 
+let maxValue =  parseInt(prompt('Максимальное значение числа для игры','999'));
 
 minValue = (minValue < -999) ? minValue = -999 : (minValue > 999) ? minValue = 999 : minValue;
 maxValue = (maxValue > 999) ? maxValue = 999 : (maxValue < -999) ? maxValue = -999 : maxValue;
@@ -61,7 +61,7 @@ const answerField = document.getElementById('answerField');
     
     
 orderNumberField.innerText = orderNumber;
-answerField.innerText = `Вы загадали число \n ${result.join(' ')}?`;
+answerField.innerText = `Вы загадали число \n ${result.join(' ')} ?`;
 
 
 
@@ -74,13 +74,13 @@ document.getElementById('btnLess').addEventListener('click', function () {  // �
         if (minValue === answerNumber){                                         // Калапс алгоритма
             const phraseRandom = Math.round(Math.random() * 2);
             if (phraseRandom == 0) {  
-                answerPhrase  = `Прошу вас, будьте внимательны!\n\u{1F914}`;
+                answerPhrase  = `Прошу вас, будьте внимательны !\n\u{1F914}`;
             } else 
             if (phraseRandom == 1) {
                 answerPhrase  = `Всё фигня, давай заново..\n\u{1F92F}`;
             } else 
             if (phraseRandom == 2) {
-                answerPhrase  = `Ваш IQ отрицательный?\n\u{1F910}`;
+                answerPhrase  = `Ваш IQ отрицательный ?\n\u{1F910}`;
             }
 
             answerField.innerText = answerPhrase;
@@ -132,13 +132,13 @@ document.getElementById('btnLess').addEventListener('click', function () {  // �
             orderNumberField.innerText = orderNumber;
             const phraseRandom = Math.round(Math.random() * 2);
             if (phraseRandom === 0) {
-                answerPhrase  = `Вот фантазёр, это же \n ${result.join(' ') }?`;
+                answerPhrase  = `Вот фантазёр, это же \n ${result.join(' ') } ?`;
             } else
             if (phraseRandom === 1) {
-                answerPhrase  = `Число в студию и это \n ${result.join(' ') }?`;
+                answerPhrase  = `Число в студию и это \n ${result.join(' ') } ?`;
             } else
             if (phraseRandom === 2) {
-                answerPhrase  = `Вжух, мы видим цифру \n ${result.join(' ') }?`;
+                answerPhrase  = `Вжух, мы видим цифру \n ${result.join(' ') } ?`;
             } 
             answerField.innerText = answerPhrase ;
            
@@ -210,13 +210,13 @@ document.getElementById('btnOver').addEventListener('click', function () {     /
             orderNumberField.innerText = orderNumber;
             const phraseRandom = Math.round(Math.random() * 2);
             if (phraseRandom === 0) {
-                answerPhrase  = `Вот фантазёр, это же \n ${result.join(' ') }?`;
+                answerPhrase  = `Вот фантазёр, это же \n ${result.join(' ') } ?`;
             } else
             if (phraseRandom === 1) {
-                answerPhrase  = `Число в студию и это \n ${result.join(' ')}?`;
+                answerPhrase  = `Число в студию и это \n ${result.join(' ')} ?`;
             } else
             if (phraseRandom === 2) {
-                answerPhrase  = `Вжух, мы видим цифру \n ${result.join(' ')}?`;
+                answerPhrase  = `Вжух, мы видим цифру \n ${result.join(' ')} ?`;
             }    
             answerField.innerText = answerPhrase ;
             }
@@ -228,13 +228,13 @@ document.getElementById('btnEqual').addEventListener('click', function () {  //�
     if (gameRun){
         const phraseRandom = Math.round(Math.random() * 2);
             if (phraseRandom === 0) {
-                answerPhrase  = `100% концентрации \n и вот наш результат!\n\u{1F60E}`;
+                answerPhrase  = `100% концентрации \n и вот наш результат !\n\u{1F60E}`;
             } else
             if (phraseRandom === 1) {
-                answerPhrase = `Это было увлекательно!\n\u{1F60E}`;
+                answerPhrase = `Это было увлекательно !\n\u{1F60E}`;
             } else
             if (phraseRandom === 2) {
-                answerPhrase  = `Я чёртов гений! Жми ещё!\n\u{1F60E}`;
+                answerPhrase  = `Я чёртов гений! Жми ещё !\n\u{1F60E}`;
             }
         answerField.innerText =  answerPhrase;
         gameRun = false;
