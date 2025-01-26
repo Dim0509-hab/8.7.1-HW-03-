@@ -80,7 +80,7 @@ document.getElementById('btnLess').addEventListener('click', function () {  // �
                 answerPhrase  = `Всё фигня, давай заново..\n\u{1F92F}`;
             } else 
             if (phraseRandom == 2) {
-                answerPhrase  = `Ваш IQ отрицательный ?\n\u{1F910}`;
+                answerPhrase  = `Ваш IQ отрицательный)) ?\n\u{1F910}`;
             }
 
             answerField.innerText = answerPhrase;
@@ -158,7 +158,7 @@ document.getElementById('btnOver').addEventListener('click', function () {     /
                 answerPhrase  = `Всё фигня, давай заново..\n\u{1F92F}`;
             } else 
             if (phraseRandom == 2) {
-                answerPhrase  = `Ваш IQ отрицательный?\n\u{1F910}`;
+                answerPhrase  = `Ваш IQ отрицательный)) ?\n\u{1F910}`;
             }
 
             answerField.innerText = answerPhrase;
